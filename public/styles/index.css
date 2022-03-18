@@ -70,7 +70,34 @@ h2 {
     grid-area: main-view;
     z-index: 2;
     height: 50px;
-    background-color: darkolivegreen;
+}
+
+.top-bar__header {
+    margin: 16px 32px;
+    display: flex;
+    justify-content: end;
+}
+
+.top-bar__profile-button {
+    border: none;
+    border-radius: 24px;
+    background: #000000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 172px;
+    height: 32px;
+}
+
+.profile-button__profile-icon-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+    background: #353939;
 }
 
 .root__nav-bar {
@@ -141,7 +168,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg,#0000ff,#ffffff);
+    background: linear-gradient(135deg, #0000ff, #ffffff);
     height: 24px;
     width: 24px;
 }
@@ -169,6 +196,16 @@ h2 {
     grid-area: main-view;
     background: linear-gradient(#2D3636 -50%, #121212);
     color: var(--text-base);
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 16px;
+    background-color: #6A7070;
 }
 
 .main-view__sections {
@@ -187,7 +224,7 @@ h2 {
     display: flex;
     flex-direction: row;
     height: 80px;
-    width: 400px;
+    width: 450px;
     min-height: 64px;
     min-width: 245px;
     border-radius: 8px;

@@ -23,6 +23,18 @@ h2 {
     text-transform: none;
 }
 
+h3 {
+    color: var(--text-base);
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: -0.04em;
+    text-transform: none;
+}
+
 #root {
     display: grid;
     grid-template-areas:
@@ -210,7 +222,7 @@ h2 {
 
 .root__main-view {
     grid-area: main-view;
-    background: linear-gradient(#2D3636 -80%, #121212);
+    background: linear-gradient(195deg, #1ED760 -60%, #041f0d, #121212);
     color: var(--text-base);
     overflow-y: auto;
 }
@@ -226,13 +238,16 @@ h2 {
 
 .main-view__sections {
     margin: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .main-view__recently-played-playlists {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    column-gap: 24px;
+    justify-content: space-between;
     row-gap: 12px;
 }
 
@@ -279,6 +294,64 @@ h2 {
     border: none;
     background: #1ED760;
     z-index: 2;
+}
+
+.main-view__my-shows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.my-shows__card {
+    width: 215px;
+    height: 300px;
+    padding: 16px;
+    display: flex;
+    background: #181a19;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.card__image-container {
+    display: flex;
+}
+
+.card__image {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.card__title-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.title-container__name-of-song {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 700;
+}
+
+.title-container__name-of-author {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
+    color: #a7a7a7;
 }
 
 .root__now-playing-bar {
@@ -359,7 +432,7 @@ h2 {
     border: none;
 }
 
-.play-contollers__playback-bar{
+.play-contollers__playback-bar {
     display: flex;
     align-items: center;
     gap: 8px;

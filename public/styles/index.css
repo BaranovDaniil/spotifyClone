@@ -237,7 +237,10 @@ h3 {
 .main-view__recently-played-item {
     display: flex;
     height: 6.25vw;
-    width: 34.766vw;
+    min-width: 300px;
+    width: 34.912vw;
+    max-width: 440px;
+    max-height: 80px;
     min-height: 64px;
     min-width: 354px;
     border-radius: 8px;
@@ -248,8 +251,10 @@ h3 {
     border-radius: 8px 0 0 8px;
     min-width: 64px;
     min-height: 64px;
-    max-width: 6.25vw;
-    max-height: 6.25vw;
+    max-width: 80px;
+    max-height: 80px;
+    width: 6.25vw;
+    height: 6.25vw;
     box-sizing: border-box;
     object-fit: cover;
     object-position: center center;
@@ -290,6 +295,8 @@ h3 {
     min-height: 300px;
     width: 19vw;
     height: 28vw;
+    max-width: 225px;
+    max-height: 320px;
     padding: 16px;
     display: flex;
     background: #181a19;
@@ -352,7 +359,6 @@ h3 {
     height: inherit;
     display: flex;
     flex: 1;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -366,10 +372,8 @@ h3 {
 }
 
 .now-playing-bar__song-img {
-    min-width: 56px;
-    min-height: 56px;
-    width: 5.469vw;
-    height: 5.469vw;
+    width: 56px;
+    height: 56px;
 }
 
 .song__info-about-song {
@@ -441,6 +445,7 @@ h3 {
 }
 
 .current-time-trackbar__background {
+    min-width: inherit;
     width: inherit;
     height: 4px;
     border-radius: 4px;
@@ -457,6 +462,9 @@ h3 {
 
 .now-playing-bar__volume-bar {
     display: flex;
+    min-width: 202px;
+    width: 19.727vw;
+    justify-content: center;
     align-items: center;
     gap: 8px;
 }
@@ -464,8 +472,7 @@ h3 {
 .volume-bar-value {
     display: flex;
     align-items: center;
-    min-width: 94px;
-    width: 9.180vw;
+    width: 94px;
     height: 12px;
 }
 
@@ -477,7 +484,7 @@ h3 {
 }
 
 .volume-trackbar__tracker {
-    width: 4.59vw;
+    width: 44px;
     height: inherit;
     border-radius: inherit;
     background: #1ED760;

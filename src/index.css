@@ -1,4 +1,4 @@
-body {
+.body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,7 +10,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#root {
+.root {
     display: grid;
     grid-template-areas:
         "nav-bar main-view"
@@ -21,10 +21,10 @@ body {
     height: 100%;
     --text-base: #fff;
     --icon-size: 32px;
-    --icon-size: 32px;
+    --top-bar-height: 64px;
 }
 
-h2 {
+.h2-text {
     color: var(--text-base);
     font-size: 2rem;
     line-height: 2.25rem;
@@ -32,7 +32,7 @@ h2 {
     text-transform: none;
 }
 
-h3 {
+.h3-text {
     color: var(--text-base);
     font-size: 1.6rem;
     line-height: 2rem;
@@ -85,8 +85,8 @@ h3 {
 
 .root__top-bar {
     grid-area: main-view;
-    z-index: 2;
-    --top-bar-height: 64px;
+    z-index: 3;
+    background: linear-gradient(#ffffff7a, #ffffff00);
     height: var(--top-bar-height);
 }
 
@@ -148,6 +148,7 @@ h3 {
 
 .root__main-spacer {
     height: var(--top-bar-height);
+    z-index: 2;
 }
 
 .root__create-playlist-button {
@@ -212,10 +213,12 @@ h3 {
 }
 
 ::-webkit-scrollbar {
+    z-index: 2;
     width: 16px;
 }
 
 ::-webkit-scrollbar-thumb {
+    z-index: 2;
     height: 16px;
     background-color: #6A7070;
 }
@@ -237,7 +240,6 @@ h3 {
 .main-view__recently-played-item {
     display: flex;
     height: 6.25vw;
-    min-width: 300px;
     width: 34.912vw;
     max-width: 440px;
     max-height: 80px;

@@ -10,7 +10,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.root {
+#root {
     display: grid;
     grid-template-areas:
         "nav-bar main-view"

@@ -1,23 +1,30 @@
-import React from 'react';
+import React from "react";
+import { token } from "./utils/getToken";
+import NavBar from "./components/NavBar";
+import Header from "./components/Header";
+import MainContent from "./components/MainContent";
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+function App() {
+  /**
+   * get the token and store it
+   */
+  async function fetchToken() {
+    try {
+      const apiToken = await token();
+      localStorage.setItem("token", apiToken);
+    } catch (error) {
+      alert(error);
+    }
+  }
+  fetchToken();
 
-// export default App;
+  return (
+    <>
+      <Header></Header>
+      <NavBar></NavBar>
+      <MainContent></MainContent>
+    </>
+  );
+}
+
+export default App;

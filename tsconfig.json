@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "public/utils", "public/fetchAlbums.js", "public/apiRequests.js"  ]
 }
